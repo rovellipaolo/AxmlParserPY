@@ -86,7 +86,7 @@ class StringBlock:
         while length > 0:
             offset += 2
             # Unicode character
-            data += unichr(self.getShort(self.m_strings, offset))
+            data += chr(self.getShort(self.m_strings, offset))
 
             # FIXME
             if data[-1] == "&":
