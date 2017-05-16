@@ -24,7 +24,7 @@
 # algorythm <algorythm [at] gmail /dot/ com>
 # Jiejing Zhang <kzjeef [at] gmail /dot/ com>  // for package to pip
 # -------------------------------------------------------------------
-# version: 0.0.2
+# version: 0.0.3
 # -------------------------------------------------------------------
 
 Example:
@@ -45,6 +45,9 @@ import axmlparserpy.apk as apk
 
 
 CHANGELOG
+
+0.0.3
+revert 0.0.2's change, which cause some problem on python2.7.
 
 0.0.2
 Make library python 3 compatible
