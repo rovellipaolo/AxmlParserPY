@@ -254,7 +254,6 @@ class APK:
         return self.permissions
     #permissions = property(get_permissions)
 
-
     def get_min_sdk_version(self):
         """
             Return the android:minSdkVersion attribute
@@ -277,10 +276,10 @@ class APK:
     libraries = property(get_libraries)
 
     def show(self):
-        print(("FILES: ", self.get_files_types()))
+        print("FILES: ", self.get_files_types())
 
-        print(("ACTIVITIES: ", self.get_activities()))
-        print(("SERVICES: ", self.get_services()))
-        print(("RECEIVERS: ", self.get_receivers()))
-        print(("PROVIDERS: ", self.get_providers()))
+        print("ACTIVITIES: ", self.get_activities())
+        print("SERVICES: ", self.get_services())
+        print("RECEIVERS: ", self.get_receivers())
+        print("PROVIDERS: ", self.get_providers())
 
