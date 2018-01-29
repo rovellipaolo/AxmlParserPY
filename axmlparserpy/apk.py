@@ -16,12 +16,12 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with Androguard.  If not, see <http://www.gnu.org/licenses/>.
 
-import bytecode
+from . import bytecode
 
-from axmlprinter import AXMLPrinter
-from bytecode import SV
-
-import zipfile, StringIO
+from .axmlprinter import AXMLPrinter
+from .bytecode import SV
+import io
+import zipfile
 from struct import pack, unpack
 from xml.dom import minidom
 
@@ -61,7 +61,7 @@ class APK:
         if ZIPMODULE == 0:
             self.zip = ChilkatZip(self.__raw)
         else:
-            self.zip = zipfile.ZipFile(StringIO.StringIO(self.__raw))
+            self.zip = zipfile.ZipFile(io.BytesIO(self.__raw))
 
         # CHECK if there is only one embedded file
         #self._reload_apk()
@@ -252,7 +252,7 @@ class APK:
             Return permissions
         """
         return self.permissions
-    permissions = property(get_permissions)
+    #permissions = property(get_permissions)
 
     def get_min_sdk_version(self):
         """
